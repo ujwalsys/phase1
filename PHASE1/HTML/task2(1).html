@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>God-Tier Profile with Company</title>
+  <style>
+    /* Reset some basic styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a8c0ff, #3f72b5);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Profile card container styling */
+    #profile {
+      background: #ffffff;
+      color: #333;
+      width: 360px;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    #profile:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Profile company logo styling */
+    .company-logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    /* Profile name styling */
+    .name {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #3f72b5;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: color 0.3s ease;
+    }
+
+    .name:hover {
+      color: #f9a826;
+    }
+
+    /* Role text styling */
+    .role {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 20px;
+      text-transform: capitalize;
+    }
+
+    /* Company name and logo styling */
+    .company {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .company p {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .contact p {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: #f9a826;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #3f72b5;
+    }
+
+    /* Skills section */
+    .skills {
+      list-style: none;
+      margin-top: 25px;
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .skills li {
+      background-color: #f9a826;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .skills li:hover {
+      background-color: #f57f17;
+      transform: scale(1.1);
+    }
+
+    /* Highlighted skills */
+    .highlight {
+      background-color: #3f72b5;
+      color: #fff;
+    }
+
+    .highlight:hover {
+      background-color: #2b4c89;
+    }
+
+    /* Profile image styling (optional) */
+    .profile-image {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Profile Card with Company Info -->
+  <div id="profile">
+    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Picture" class="profile-image">
+    
+    <!-- Company info -->
+    <div class="company">
+      <img src="https://content.linkedin.com/content/dam/me/business/en-us/sales-solutions/resources/images/apac/images/infosys-logo.png.original.png" alt="Company Logo" class="company-logo">
+      <p>Infosys</p>
+    </div>
+
+    <!-- Profile details -->
+    <h2 class="name">Jane Doe</h2>
+    <p class="role">Frontend Developer</p>
+    
+    <div class="contact">
+      <p>Email: <a href="mailto:jane@example.com">jane@example.com</a></p>
+      <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
+    </div>
+
+    <!-- Skills list -->
+    <ul class="skills">
+      <li>HTML</li>
+      <li class="highlight">CSS</li>
+      <li>JavaScript</li>
+      <li class="highlight">React</li>
+    </ul>
+  </div>
+
+  <!-- Profile Card 2 with Company Info -->
+  <div id="profile">
+    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Profile Picture" class="profile-image">
+    
+    <!-- Company info -->
+    <div class="company">
+      <img src="https://content.linkedin.com/content/dam/me/business/en-us/sales-solutions/resources/images/apac/images/infosys-logo.png.original.png" alt="Company Logo" class="company-logo">
+      <p>Infosys</p>
+    </div>
+
+    <!-- Profile details -->
+    <h2 class="name">John Smith</h2>
+    <p class="role">Backend Developer</p>
+    
+    <div class="contact">
+      <p>Email: <a href="mailto:john@example.com">john@example.com</a></p>
+      <p>Phone: <a href="tel:+987654321">+9 876 543 21</a></p>
+    </div>
+
+    <!-- Skills list -->
+    <ul class="skills">
+      <li>Node.js</li>
+      <li class="highlight">Express</li>
+      <li>MongoDB</li>
+      <li class="highlight">JavaScript</li>
+    </ul>
+  </div>
+
+</body>
+</html>
+<!-- Compare this snippet from HTML/task2%281%29.html: -->

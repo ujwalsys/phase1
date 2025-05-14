@@ -1,0 +1,160 @@
+<!----FLOW CONTROL STATEMENTS---->
+
+<!-----WHILE LOOP DEMO----->
+
+<script>
+
+
+let i = 5;
+
+while (i<10){
+    console.log("i = " + i);
+    i++; //i=i+1
+
+};
+
+ // op --> 5,6,7,8,9
+
+
+ console.log("------------------");
+
+
+//while loop with break statement
+
+let j=5;
+while (j<10){
+    console.log("j = " + j);
+    if (j==8) break;
+
+    j++; //j=j+1
+};
+ 
+// op --> 5,6,7,8
+
+
+ console.log("------------------");
+
+
+// demo while loop with continue statement
+
+let k=5;
+while (k<10){
+    k++;
+    if (k==8) continue; // continue means skip the remaianing statement and  carry on wth the next iterations
+    console.log("k = " + k);    
+};
+
+// op --> 6,7,9,10
+
+
+console.log("------------------");
+
+</script>
+
+
+
+<!---FOR LOOP DEMO-->
+
+<script>
+    console.log("FOR LOOP DEMO");
+
+
+    for (x=0; x<4; x=x+2){
+        console.log("x = " + x);
+    };//
+
+    // op --> 0,2
+
+    console.log("------------------");
+
+
+    // for loop with break statement
+    for (y=0; y<4; y++){
+        console.log("y = " + y);
+        if (y==2) break;
+    };
+
+    // op --> 0,1,2
+
+
+    console.log("------------------");
+
+    // for loop with continue statement
+    for (z=0; z<4; z++){
+        if (z==2) continue;
+        console.log("z = " + z);
+    };
+
+</script>
+
+
+<!---IF ELSE DEMO--->
+
+<script>
+
+console.log("IF ELSE DEMO");
+
+
+// if else statement
+if (drinkCoffee = false) {
+    console.log("I drink coffee");
+} else {
+    console.log("I don't drink coffee");
+};
+
+
+// if else if statement
+if (drinkCoffee = false) {
+    console.log("I drink coffee");
+} else if (drinkCoffee = false) {
+    console.log("I don't drink coffee");
+};
+
+
+// if else if else statement
+if (drinkCoffee = false) {
+    console.log("I drink coffee");
+} else if (drinkCoffee = false) {
+    console.log("I don't drink coffee");
+} else {
+    console.log("I don't drink coffee");
+};
+</script>
+
+
+<!---SWITCH CASE DEMO--->
+<script>
+console.log("SWITCH CASE DEMO");
+let day = new Date().getDay();
+console.log(day);
+// 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday
+day = 0 ; // for testing purposes
+day = 1 ; // for testing purposes
+switch (day) {
+    case 0:
+        console.log("Sunday");
+        break;
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    default:
+        console.log("Invalid day");
+}
+</script>
+
+<sc

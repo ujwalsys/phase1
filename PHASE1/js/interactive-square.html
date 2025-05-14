@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Square Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 40px;
+      text-align: center;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Square a Number</h1>
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button onclick="calculateSquare()">Square It</button>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateSquare() {
+      const num = document.getElementById("numberInput").value;
+      if (num === '') {
+        document.getElementById("result").textContent = "Please enter a number.";
+        return;
+      }
+      const square = Math.pow(num, 2);
+      document.getElementById("result").textContent = `Square of ${num} is ${square}`;
+    }
+  </script>
+
+</body>
+</html>

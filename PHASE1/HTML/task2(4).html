@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infosys - Mini Website</title>
+  <style>
+    /* General Reset and Global Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    /* Header with Navigation */
+    header {
+      width: 100%;
+      background-color: #3f72b5;
+      padding: 20px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav-container .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-container .logo h1 {
+      font-size: 24px;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .nav-container nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-container nav a {
+      font-size: 18px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-container nav a:hover {
+      color: #f9a826;
+    }
+
+    /* Home Section */
+    #home {
+      height: 100vh;
+      background-color: #ffffff;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    #home img {
+      width: 80%;
+      max-width: 800px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    /* About Section */
+    #about {
+      padding: 80px 20px;
+      background-color: #ffffff;
+      text-align: center;
+      color: #333;
+      margin-top: 50px;
+    }
+
+    #about p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    /* Profile Cards Section */
+    #employee-section {
+      padding: 40px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    /* Employee Cards */
+    .employee-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px;
+      width: 250px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+    }
+
+    .employee-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .employee-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .employee-card h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .employee-card p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #contact p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px 0;
+      background-color: #3f72b5;
+      text-align: center;
+      color: white;
+    }
+
+    /* Navigation Styling for Pages */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* Link Style */
+    a {
+      text-decoration: none;
+      color: #f9a826;
+    }
+
+    a:hover {
+      color: #f57f17;
+    }
+
+    /* Scroll to the top after navigation */
+    body {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <div class="nav-container">
+      <!-- Logo and Company Name -->
+      <div class="logo">
+        <img src="https://content.linkedin.com/content/dam/me/business/en-us/sales-solutions/resources/images/apac/images/infosys-logo.png.original.png" alt="Company Logo">
+        <h1>Infosys</h1>
+      </div>
+      <!-- Navigation links -->
+      <nav>
+        <a href="#home" class="nav-link" onclick="showSection('home')">Home</a>
+        <a href="#about" class="nav-link" onclick="showSection('about')">About Us</a>
+        <a href="#employee-section" class="nav-link" onclick="showSection('employee-section')">Employees</a>
+        <a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <div id="home" class="page active">
+    <img src="https://www.infosys.com/content/dam/infosys-web/en/about/images/esg-policies.jpg" alt="Infosys Image">
+  </div>
+
+  <!-- About Section -->
+  <div id="about" class="page">
+    <h2>About Us</h2>
+    <p>
+      Infosys is a global leader in next-generation digital services and consulting, with a proven track record of helping businesses across industries achieve transformational growth. With a commitment to driving innovation and sustainability, Infosys has become a trusted partner for Fortune 500 companies worldwide. Through cutting-edge technology solutions, Infosys continues to push boundaries and deliver unmatched value to its clients.
+    </p>
+  </div>
+
+  <!-- Employee Section -->
+  <div id="employee-section" class="page">
+    <h2>Our Employees</h2>
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Employee 1">
+      <h3>Jane Doe</h3>
+      <p>Frontend Developer</p>
+    </div>
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Employee 2">
+      <h3>John Smith</h3>
+      <p>Software Engineer</p>
+    </div>
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Employee 3">
+      <h3>Emma Watson</h3>
+      <p>Product Manager</p>
+    </div>
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Employee 4">
+      <h3>Michael Brown</h3>
+      <p>Data Scientist</p>
+    </div>
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Employee 5">
+      <h3>Olivia Johnson</h3>
+      <p>UX Designer</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="page">
+    <h2>Contact Infosys</h2>
+    <p>Email: <a href="mailto:info@infosys.com">info@infosys.com</a></p>
+    <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
+    <p>Address: Infosys Limited, Electronics City, Bangalore, India</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Infosys Limited. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      // Hide all sections
+      let pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+
+      // Show selected section
+      let section = document.getElementById(id);
+      section.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

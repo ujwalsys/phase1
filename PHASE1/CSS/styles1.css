@@ -1,0 +1,10 @@
+thead th {
+    font-weight: bold;
+    background-color: green;
+    color: white; /* Optional: for better readability */
+    padding: 10px; /* Optional: for better spacing */
+    font-size: 24px;
+    
+
+    
+}

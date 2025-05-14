@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .paragraph::before {
+      content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdsgKdJMeqOK0nQOuqhxkrn2n8Z6me59GSvg&s');
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .paragraph::after {
+      content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdsgKdJMeqOK0nQOuqhxkrn2n8Z6me59GSvg&s');
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    .paragraph::first-line {
+      font-size: 16px; /* normal size */
+      text-decoration: underline; /* underline */
+    }
+
+    .paragraph span {
+      font-size: 36px; /* large font for first word */
+      font-weight: bold;
+    }
+
+    .paragraph::first-letter {
+        font-size: 4em; /* normal size */
+    }
+ 
+    .first-letter:hover {
+      font-size: 5em;
+      color: red;
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <p class="paragraph">
+    <span>Sunlight</span> shines through the trees, casting a warm golden glow. Nature feels alive and peaceful.
+  </p>
+  <span class="first-letter">Sunlight</span>
+    
+
+</body>
+</html>

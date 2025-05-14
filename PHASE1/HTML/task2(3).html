@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infosys Profile Page</title>
+  <style>
+    /* Reset some basic styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a8c0ff, #3f72b5);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      flex-direction: column;
+    }
+
+    /* Header with navigation */
+    header {
+      width: 100%;
+      background-color: #3f72b5;
+      padding: 20px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav-container .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-container .logo h1 {
+      font-size: 24px;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .nav-container nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-container nav a {
+      font-size: 18px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-container nav a:hover {
+      color: #f9a826;
+    }
+
+    /* Home Section Styling */
+    #home {
+      width: 100%;
+      height: 100vh;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #home img {
+      width: 80%;
+      max-width: 800px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    /* About Us Section Styling */
+    #about {
+      width: 100%;
+      padding: 80px 20px;
+      background-color: #ffffff;
+      color: #333;
+      text-align: center;
+    }
+
+    #about p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    /* Profile card container styling */
+    #profile {
+      background: #ffffff;
+      color: #333;
+      width: 360px;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      margin-top: 120px; /* Space for the fixed header */
+    }
+
+    #profile:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Profile company logo styling */
+    .company-logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    /* Profile name styling */
+    .name {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #3f72b5;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: color 0.3s ease;
+    }
+
+    .name:hover {
+      color: #f9a826;
+    }
+
+    /* Role text styling */
+    .role {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 20px;
+      text-transform: capitalize;
+    }
+
+    /* Company name and logo styling */
+    .company {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .company p {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .contact p {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: #f9a826;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #3f72b5;
+    }
+
+    /* Skills section */
+    .skills {
+      list-style: none;
+      margin-top: 25px;
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .skills li {
+      background-color: #f9a826;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .skills li:hover {
+      background-color: #f57f17;
+      transform: scale(1.1);
+    }
+
+    /* Highlighted skills */
+    .highlight {
+      background-color: #3f72b5;
+      color: #fff;
+    }
+
+    .highlight:hover {
+      background-color: #2b4c89;
+    }
+
+    /* Profile image styling (optional) */
+    .profile-image {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Employee Card Styling */
+    .employee-card {
+      display: inline-block;
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .employee-card:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .employee-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .employee-card h3 {
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .employee-card p {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <div class="nav-container">
+      <!-- Logo and Company Name -->
+      <div class="logo">
+        <img src="https://content.linkedin.com/content/dam/me/business/en-us/sales-solutions/resources/images/apac/images/infosys-logo.png.original.png" alt="Company Logo">
+        <h1>Infosys</h1>
+      </div>
+      <!-- Navigation links -->
+      <nav>
+        <a href="#home" onclick="showHome()">Home</a>
+        <a href="#about" onclick="showAbout()">About Us</a>
+        <a href="#employees">Employees</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <div id="home">
+    <img src="https://www.infosys.com/content/dam/infosys-web/en/about/images/esg-policies.jpg" alt="Infosys Image">
+  </div>
+
+  <!-- About Us Section -->
+  <div id="about">
+    <h2>About Us</h2>
+    <p>
+      Infosys is a global leader in next-generation digital services and consulting, with a proven track record of helping businesses across industries achieve transformational growth. With a commitment to driving innovation and sustainability, Infosys has become a trusted partner for Fortune 500 companies worldwide. Through cutting-edge technology solutions, Infosys continues to push boundaries and deliver unmatched value to its clients.
+    </p>
+  </div>
+
+  <!-- Employee Section -->
+  <div id="employees" style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px;">
+    <!-- Employee Cards -->
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Employee 1">
+      <h3>Jane Doe</h3>
+      <p>Frontend Developer</p>
+    </div>
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Employee 2">
+      <h3>John Smith</h3>
+      <p>Software Engineer</p>
+    </div>
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Employee 3">
+      <h3>Emma Watson</h3>
+      <p>Product Manager</p>
+    </div>
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Employee 4">
+      <h3>Michael Brown</h3>
+      <p>Data Scientist</p>
+    </div>
+    <div class="employee-card">
+      <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Employee 5">
+      <h3>Olivia Johnson</h3>
+      <p>UX Designer</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" style="padding: 20px; text-align: center;">
+    <h2>Contact Infosys</h2>
+    <p>Email: <a href="mailto:info@infosys.com">info@infosys.com</a></p>
+    <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
+    <p>Address: Infosys Limited, Electronics City, Bangalore, India</p>
+  </div>
+
+  <script>
+    function showHome() {
+      document.body.style.backgroundColor = '#f9f9f9';
+      document.getElementById('home').style.display = 'flex';
+      document.getElementById('about').style.display = 'none';
+    }
+
+    function showAbout() {
+      document.body.style.backgroundColor = '#ffffff';
+      document.getElementById('about').style.display = 'block';
+      document.getElementById('home').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

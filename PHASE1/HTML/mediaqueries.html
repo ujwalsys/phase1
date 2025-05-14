@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      transition: background-color 0.5s ease;
+    }
+
+    /* Default background */
+    body {
+      background-color: lightblue;
+    }
+
+    /* Small screens */
+    @media (max-width: 600px) {
+      body {
+        background-color: lightcoral;
+      }
+    }
+
+    /* Medium screens */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      body {
+        background-color: lightgreen;
+      }
+    }
+
+    /* Large screens */
+    @media (min-width: 1025px) {
+      body {
+        background-color: lightgoldenrodyellow;
+      }
+    }
+  </style>
+</head>
+<body>
+</body>
+</html>

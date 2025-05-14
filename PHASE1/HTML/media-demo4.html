@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Video Page</title>
+</head>
+<body style="text-align: center; background: #f4f4f4; font-family: sans-serif; padding: 40px;">
+
+  <h1>Featured Videos</h1>
+
+  <!-- First Video -->
+  <video width="640" controls autoplay muted style="margin-bottom: 30px; background: hwb(9 4% 9%);">
+    <source src="VIDEOS/chemistry-lab.mp4" type="video/mp4">
+    <source src="VIDEOS/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Second Video -->
+  <video width="640" controls autoplay muted style="margin-bottom: 30px; background: #000;">
+    <source src="VIDEOS/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- YouTube Video -->
+  <iframe width="640" height="360" style="border: none; background: #000;"
+    src="https://www.youtube.com/embed/1SWALPatxb4"
+    title="YouTube video" allow="autoplay; encrypted-media" allowfullscreen>
+
+  </iframe>
+ <!-- Wikipedia Page -->
+
+ <h1>Wikipedia Homepage Embedded</h1>
+
+  <iframe
+    src="https://www.wikipedia.org/"
+    width="1000"
+    height="600"
+    style="border: 1px solid #ccc;">
+  </iframe>
+
+  
+  <iframe width="640" height="400" style="border: 1px solid;"
+    src="https://en.wikipedia.org/wiki/Chemistry"
+    title="Wikipedia Chemistry Page">
+  </iframe>
+</body>
+</html>

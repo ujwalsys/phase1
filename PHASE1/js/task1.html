@@ -1,0 +1,23 @@
+<script>
+let a;
+
+    function sq(a){
+        let c = a **2;
+        return c;
+    }
+alert("BE CAREFUL!!!")
+</script>
+
+<input type="text" id="varA">
+<br>
+<input type="button" 
+       onclick="document.getElementById('messages').innerHTML = sq(Number(document.getElementById('varA').value));" 
+       value="Square">
+
+
+              
+<body>
+
+    <div id="messages"></div>
+</body>
+

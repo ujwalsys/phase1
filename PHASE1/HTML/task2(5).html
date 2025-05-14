@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infosys Employee Page</title>
+  <style>
+    /* Your existing CSS */
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    .profile-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .profile-card .card {
+      background: white;
+      width: 25%;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-card .card img {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .profile-card .card h2 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .profile-card .card p {
+      margin: 5px 0;
+    }
+
+    .profile-card .card a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* @media print styles */
+    @media print {
+      /* Hide elements you don't want to show in the print layout */
+      .no-print {
+        display: none;
+      }
+
+      /* Change the layout of the body for printing */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 12pt;
+        margin: 20mm;
+      }
+
+      /* Adjust the page content */
+      .container {
+        width: 100%;
+        padding: 0;
+      }
+
+      /* Customize headers and footers */
+      header, footer {
+        display: none; /* Hide header and footer in print */
+      }
+
+      /* Style for printed tables */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table th, table td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Infosys Employee Directory</h1>
+  </header>
+
+  <div class="container">
+    <!-- About Us Section -->
+    <div id="about-us">
+      <h2>About Us</h2>
+      <p>
+        Infosys is a global leader in next-generation digital services and consulting. We enable clients in more than 50 countries to navigate their digital transformation. With over 200,000 employees, Infosys empowers clients to stay ahead of the curve in an ever-evolving market landscape.
+      </p>
+      <img src="https://www.infosys.com/content/dam/infosys-web/en/about/images/esg-policies.jpg" alt="Infosys About Us" style="width:100%; border-radius: 10px;">
+    </div>
+
+    <!-- Employee Directory -->
+    <div id="employee-directory">
+      <h2>Employee Directory</h2>
+      <div class="profile-card">
+        <!-- Employee Card 1 -->
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Employee Picture">
+          <h2>John Doe</h2>
+          <p><strong>Role:</strong> Frontend Developer</p>
+          <p><strong>Email:</strong> <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+123456789">+1 234 567 89</a></p>
+        </div>
+        
+        <!-- Employee Card 2 -->
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Employee Picture">
+          <h2>Jane Smith</h2>
+          <p><strong>Role:</strong> UI/UX Designer</p>
+          <p><strong>Email:</strong> <a href="mailto:jane.smith@example.com">jane.smith@example.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+987654321">+9 876 543 21</a></p>
+        </div>
+        
+        <!-- Add more employee cards here -->
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
